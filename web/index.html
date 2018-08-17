@@ -5,9 +5,10 @@
     <title>七夕快乐</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <link type="text/css" rel="stylesheet" href="css/index.css" >
+    <script  src="js/jquery.min.js"></script>
 </head>
 <body>
-    <video  src="video/你是我的春夏秋冬.mp3"  autoplay hidden loop></video>
+    <div id="bgmvideo"></div>
     <page class="c">七</page>
     <page class="x">夕</page>
     <page class="q">快</page>
@@ -17,3 +18,14 @@
     </page>
 </body>
 </html>
+<script>
+    $(document).ready(function () {
+        if (!sessionStorage.getItem("bgm")) {
+            $("#bgmvideo").append(
+                '<audio src="video/你是我的春夏秋冬.mp3" autoplay hidden loop></audio>'
+            );
+            sessionStorage.setItem("bgm", 1);
+        }
+    })
+
+</script>
