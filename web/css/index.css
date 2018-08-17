@@ -41,6 +41,7 @@ page{
     animation: z 10s infinite;
 }
 
+
 @keyframes z {
     0%{opacity: 0}
     70%{opacity: 0}
